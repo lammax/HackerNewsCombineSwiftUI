@@ -17,7 +17,9 @@ struct StoryListView: View {
         NavigationView {
             
             List(self.storyListVM.stories, id: \.id) { storyVM in
-                Text("\(storyVM.id)")
+                NavigationLink(destination: StoryDetailView(storyId: storyVM.id)) {
+                    Text("\(storyVM.id)")
+                }
                 .font(.title)
                 .foregroundColor(.blue)
             }

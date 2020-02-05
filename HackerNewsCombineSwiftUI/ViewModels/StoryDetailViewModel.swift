@@ -11,7 +11,7 @@ import Combine
 
 class StoryDetailViewModel: ObservableObject {
     
-    var storyId: Int
+    private var storyId: Int?
     
     private let net: NetManager = NetManager.sharedInstance
     
@@ -19,11 +19,13 @@ class StoryDetailViewModel: ObservableObject {
     
     @Published private var story: Story!
     
-    init(storyId: Int) {
+    init(with storyId: Int?) {
         self.storyId = storyId
         
-        self.cancellable = net.getStory(by: self.storyId).sink(receiveCompletion: { _ in }) { story in
-            self.story = story
+        if let id = self.storyId {
+            self.cancellable = net.getStory(by: id).sink(receiveCompletion: { _ in }) { story in
+                self.story = story
+            }
         }
         
     }
@@ -32,11 +34,15 @@ class StoryDetailViewModel: ObservableObject {
 extension StoryDetailViewModel {
     
     var title: String {
-        return self.story.title
+        return self.story?.title ?? "No title"
+    }
+    
+    var text: String {
+        return self.story?.text ?? "No text"
     }
     
     var url: String {
-        return self.story.url
+        return self.story?.url ?? "No url"
     }
     
 }

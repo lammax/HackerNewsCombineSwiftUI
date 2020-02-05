@@ -24,14 +24,15 @@ import Foundation
 
 struct Story: Decodable {
     
-    let by: String
-    let descendants: Int
-    let id: Int
-    let kids: [Int]
-    let score: Int
-    let time: UInt64
-    let title: String
-    let type: String
-    let url: String
+    let by: String?
+    let descendants: Int?
+    let id: Int?
+    let kids: [Int]?
+    let score: Int?
+    let text: String?
+    let time: UInt64?
+    let title: String?
+    let type: String?
+    let url: String?
     
 }
