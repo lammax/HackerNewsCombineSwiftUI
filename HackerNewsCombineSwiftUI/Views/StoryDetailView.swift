@@ -23,6 +23,7 @@ struct StoryDetailView: View {
         VStack {
             Text(self.storyDetailVM.title)
             Text(self.storyDetailVM.text)
+            WebviewUI(url: self.storyDetailVM.url)
         }
     }
 }

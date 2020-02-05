@@ -37,7 +37,6 @@ class NetManager {
             .map(\.data)
             .decode(type: Story.self, decoder: JSONDecoder())
             .catch { _ in Empty<Story, Error>() }
-            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
         
     }

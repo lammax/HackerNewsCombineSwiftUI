@@ -24,15 +24,19 @@ class StoryDetailViewModel: ObservableObject {
 extension StoryDetailViewModel {
     
     var title: String {
-        return self.story?.title ?? "No title"
+        return self.story?.title ?? ""
     }
     
     var text: String {
-        return self.story?.text ?? "No text"
+        return self.story?.text ?? ""
     }
     
-    var url: String {
-        return self.story?.url ?? "No url"
+    var url: URL? {
+        if let urlAddress = self.story?.url {
+            return URL(string: urlAddress)
+        } else {
+            return nil
+        }
     }
     
 }
