@@ -30,8 +30,8 @@ struct Constants {
             return baseURL + "\(kind)" + urlRemain
         }
 
-        func storyURL(id: Int) -> String {
-            return baseURL + "item/\(id)" + urlRemain
+        func storyURL(id: Int?) -> String {
+            return baseURL + "item/\(id ?? -1)" + urlRemain
         }
         
     }

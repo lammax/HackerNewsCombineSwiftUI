@@ -16,12 +16,11 @@ struct StoryListView: View {
     var body: some View {
         NavigationView {
             
-            List(self.storyListVM.stories, id: \.id) { storyVM in
-                NavigationLink(destination: StoryDetailView(storyId: storyVM.id)) {
-                    Text("\(storyVM.id)")
+            List(self.storyListVM.storiesVM) { storyVM in
+                NavigationLink(destination: StoryDetailView(story: storyVM.story )) {
+                    Text("\(storyVM.title)")
                 }
-                .font(.title)
-                .foregroundColor(.blue)
+                .font(.body)
             }
             
         .navigationBarTitle("Hacker News")

@@ -35,4 +35,17 @@ struct Story: Decodable {
     let type: String?
     let url: String?
     
+    init() {
+        self.by = nil
+        self.descendants = nil
+        self.id = nil
+        self.kids = nil
+        self.score = nil
+        self.text = nil
+        self.time = nil
+        self.title = "N/A"
+        self.type = nil
+        self.url = nil
+    }
+    
 }

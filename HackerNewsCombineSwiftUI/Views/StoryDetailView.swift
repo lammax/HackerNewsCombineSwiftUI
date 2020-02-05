@@ -13,9 +13,9 @@ struct StoryDetailView: View {
     
     @ObservedObject private var storyDetailVM: StoryDetailViewModel
     
-    init(storyId: Int? = nil) {
+    init(story: Story? = nil) {
         
-        self.storyDetailVM = StoryDetailViewModel(with: storyId)
+        self.storyDetailVM = StoryDetailViewModel(with: story)
         
     }
     
@@ -29,6 +29,6 @@ struct StoryDetailView: View {
 
 struct StoryDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryDetailView(storyId: 8863)
+        StoryDetailView()
     }
 }
