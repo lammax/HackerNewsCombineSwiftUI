@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0433060F23EAE63200827E65 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433060E23EAE63200827E65 /* Stories.swift */; };
 		04B3128823E8C3DB001D63CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3128723E8C3DB001D63CE /* AppDelegate.swift */; };
 		04B3128A23E8C3DB001D63CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3128923E8C3DB001D63CE /* SceneDelegate.swift */; };
 		04B3128C23E8C3DB001D63CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3128B23E8C3DB001D63CE /* ContentView.swift */; };
@@ -14,9 +15,11 @@
 		04B3129123E8C3DD001D63CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B3129023E8C3DD001D63CE /* Preview Assets.xcassets */; };
 		04B3129423E8C3DD001D63CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B3129223E8C3DD001D63CE /* LaunchScreen.storyboard */; };
 		04B3129E23E8C428001D63CE /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3129D23E8C428001D63CE /* NetManager.swift */; };
+		04B312A123E8C5AC001D63CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B312A023E8C5AC001D63CE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0433060E23EAE63200827E65 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		04B3128423E8C3DB001D63CE /* HackerNewsCombineSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsCombineSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B3128723E8C3DB001D63CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B3128923E8C3DB001D63CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		04B3129323E8C3DD001D63CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B3129523E8C3DD001D63CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B3129D23E8C428001D63CE /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
+		04B312A023E8C5AC001D63CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0433060D23EAE5CC00827E65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0433060E23EAE63200827E65 /* Stories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04B3127B23E8C3DB001D63CE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,8 @@
 		04B3129B23E8C409001D63CE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0433060D23EAE5CC00827E65 /* Models */,
+				04B3129F23E8C59A001D63CE /* Utils */,
 				04B3129C23E8C415001D63CE /* Net */,
 			);
 			path = Lib;
@@ -92,6 +106,14 @@
 				04B3129D23E8C428001D63CE /* NetManager.swift */,
 			);
 			path = Net;
+			sourceTree = "<group>";
+		};
+		04B3129F23E8C59A001D63CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04B312A023E8C5AC001D63CE /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B312A123E8C5AC001D63CE /* Constants.swift in Sources */,
 				04B3128823E8C3DB001D63CE /* AppDelegate.swift in Sources */,
 				04B3129E23E8C428001D63CE /* NetManager.swift in Sources */,
+				0433060F23EAE63200827E65 /* Stories.swift in Sources */,
 				04B3128A23E8C3DB001D63CE /* SceneDelegate.swift in Sources */,
 				04B3128C23E8C3DB001D63CE /* ContentView.swift in Sources */,
 			);

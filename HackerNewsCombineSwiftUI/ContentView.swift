@@ -7,10 +7,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    let net: NetManager = NetManager.sharedInstance
+    
     var body: some View {
         Text("Hello, World!")
+        List {
+            self.net.fetchNews()
+            .catch { _ in Just([0]) }
+            .map { stories in
+                return stories.map { id in
+                    Text("\(id)")
+                }
+            }
+        }
     }
 }
 
