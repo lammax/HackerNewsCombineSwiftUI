@@ -16,16 +16,24 @@ struct Constants {
         case beststories
     }
     
+    //https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty
+    //https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty
+    
     struct URLs {
         private let baseURL: String = "https://hacker-news.firebaseio.com/v0/"
-        var weather: String = ""
-        let urlRemain: String = ".json?print=pretty"
+        private let urlRemain: String = ".json?print=pretty"
         
-        init(kind: Stories) {
-            weather += baseURL
-            weather += "\(kind)"
-            weather += urlRemain
+        init() {
         }
+        
+        func storyListURL(kind: Stories) -> String {
+            return baseURL + "\(kind)" + urlRemain
+        }
+
+        func storyURL(id: Int) -> String {
+            return baseURL + "item/\(id)" + urlRemain
+        }
+        
     }
     
 }

@@ -21,7 +21,7 @@ class StoryListViewModel: ObservableObject {
     }
     
     private func fetchTopStories() {
-        self.cancellable = self.net.fetchNews()
+        self.cancellable = self.net.fetchNews(kind: .topstories)
         .catch { _ in Just([0]) }
         .map { storyIds in
             storyIds.map { StoryViewModel(id: $0) }
