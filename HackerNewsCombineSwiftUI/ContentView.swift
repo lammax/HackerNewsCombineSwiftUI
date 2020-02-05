@@ -11,17 +11,13 @@ import Combine
 
 struct ContentView: View {
     
-    let net: NetManager = NetManager.sharedInstance
+    @ObservedObject var storyViewModels: StoryListViewModel = StoryListViewModel()
     
     var body: some View {
-        Text("Hello, World!")
-        List {
-            self.net.fetchNews()
-            .catch { _ in Just([0]) }
-            .map { stories in
-                return stories.map { id in
-                    Text("\(id)")
-                }
+        VStack {
+            Text("Hello, World!")
+            List {
+                Text("")
             }
         }
     }
